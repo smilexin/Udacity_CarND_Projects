@@ -12,19 +12,19 @@ For me, I prefer Deep Leaning network like YOLO for It's easy to implement and r
  to get a better understanding of object detection. Refer to Vehicle\_Detection\_P5.ipynb. 
 
 # 1. Brief Intro
-- ###An object detection problem can be approached as either a classification problem or a regression problem. Classification focus on portions of the image to determine objects, generate bounding boxes for regions that have positive classification results. The main mathod are as follows:
+- An object detection problem can be approached as either a classification problem or a regression problem. Classification focus on portions of the image to determine objects, generate bounding boxes for regions that have positive classification results. The main mathod are as follows:
 
-	1) Sliding Window + HOG or CNN
+	- Sliding Window + HOG or CNN
 
-	2) Two-stage: Region Proposals + CNN (R-CNN), or Fast-RCNN, Faster-RCNN, refer: [arxiv](https://arxiv.org/abs/1506.01497)
+	- Two-stage: Region Proposals + CNN (R-CNN), or Fast-RCNN, Faster-RCNN, refer: [arxiv](https://arxiv.org/abs/1506.01497)
 
 	For example, R-CNN use region proposal methods to first generate potential bounding boxes in an image and then run a CNN classifier on these proposed boxes. After classification, post-processing is used to refine the bounding boxes, eliminate duplicate detections, and rescore the boxes based on other objects in the scene. These complex pipelines are slow and hard to optimize because each individual component must be trained separately.
 
-- ###Regression focus on the whole image to generate bounding boxes coordinates directly from CNN. The popular network are as follows:
+- Regression focus on the whole image to generate bounding boxes coordinates directly from CNN. The popular network are as follows:
 	
-	1) One-stage: Tiny-YOLO v1, YOLO v1, v2, v3, refer: [arxiv](https://arxiv.org/abs/1506.02640), [Darknet](https://pjreddie.com/darknet/)
+	- One-stage: Tiny-YOLO v1, YOLO v1, v2, v3, refer: [arxiv](https://arxiv.org/abs/1506.02640), [Darknet](https://pjreddie.com/darknet/)
 	
-	2) SSD, refer:[SSD](https://arxiv.org/abs/1512.02325)
+	- SSD, refer:[SSD](https://arxiv.org/abs/1512.02325)
 
 	YOLO reframes object detection as a single regression problem, and go straight from image pixels to bounding box coordinates and class probabilities. A single convolutional network simultaneously predicts multiple bounding boxes and class probabilities for those boxes. YOLO trains on full images and directly optimizes detection performance.
 
