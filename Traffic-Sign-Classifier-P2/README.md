@@ -81,24 +81,23 @@ I use the classical LeNet-5 model as introduced in the cause as follows:
 
 My final model consisted of the following layers:
 
-	|        Layer          |              Description	        				
-	| --------------------- | --------------------------------------------- 
-	| Input         		| 32x32x1 grayscale image   							
-	| Convolution 5x5     	| 1x1 stride, VALID padding, outputs 28x28x6 	
-	| RELU					|												
-	| Max pooling	      	| 2x2 stride, VALID padding, outputs 14x14x6 				
-	| Convolution 5x5	    | 1x1 stride, VALID padding, outputs 10x10x16
-	| RELU					|	 	
-    | Max pooling	      	| 2x2 stride, VALID padding, outputs 5x5x16 
-	| flatten		        | outputs 400 							
-	| Fully connected		| outputs 120
-	| RELU					|   
-	| dropout               | keep_prob 0.5 	
-    | Fully connected		| outputs 84
-	| RELU					|   
-	| dropout               | keep_prob 0.5 							
-    | Fully connected		| outputs 43     									
-	
+|        Layer          |              Description	        				
+| --------------------- | --------------------------------------------- 
+| Input                 | 32x32x1 grayscale image   							
+| Convolution 5x5     	| 1x1 stride, VALID padding, outputs 28x28x6 	
+| RELU			|												
+| Max pooling	      	| 2x2 stride, VALID padding, outputs 14x14x6 	
+| Convolution 5x5	| 1x1 stride, VALID padding, outputs 10x10x16
+| RELU			|	 	
+| Max pooling	      	| 2x2 stride, VALID padding, outputs 5x5x16 
+| flatten		| outputs 400 							
+| Fully connected	| outputs 120
+| RELU			|   
+| dropout               | keep_prob 0.5 	
+| Fully connected	| outputs 84
+| RELU			|
+| dropout               | keep_prob 0.5 							
+| Fully connected	| outputs 43     									
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
@@ -122,7 +121,7 @@ I choice the well known architecture LeNet-5:
 
 * The LeNet-5 architecture was chosen because this model had proved to be classic which is enough to construct a classifier of traffic signs in relatively not complicated case.
 * The reason why I believe it would be relevant to the traffic sign application is that: The LeNet-5 model is a deep learning network using convolutional kernel, which can extract features by itself. So on traffic signs classifier case, LeNet-5 can successfuly extract features from training set.
-* The final model's accuracy on the training 0.999, validation 0.960 and test set 0.944, provide evidence that the model works well. The model learns well form the training set, the final test rate is not so high which indicate that further tuning needed to increate the mode accuracy, such as add more convorlution layers, reduce fullly connected layers, pooling, dropout optimize and so on. 
+* The final model's accuracy on the training 0.999, validation 0.960 and test set 0.944, provide evidence that the model works well. The model learns well form the training set, the final test rate is not so high which indicate that further tuning needed to increate the model's accuracy, such as add more convolution layers, reduce fullly connected layers, pooling, dropout optimize and so on. 
  
 
 ### Test a Model on New Images
